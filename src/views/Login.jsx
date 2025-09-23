@@ -35,17 +35,17 @@ const Login = () => {
   }
 
   return (
-    <main>
+    <main className="login-main">
       <img width={100} src={logo} alt="logo de whatsapp" />
       <h1>Clon de Whatsapp</h1>
       <form onSubmit={handleSubmit}>
-        <label>Contraseña de acceso</label>
-        <input type="text" onChange={(event) => setPassword(event.target.value)} />
+        <input placeholder="Ingrese la Contraseña"
+          type="text" onChange={(event) => setPassword(event.target.value)} />
         <button>Acceder</button>
         {message && <p style={{ color: "green" }}>{message}</p>}
         {error && <p style={{ color: "red" }}>{error}</p>}
       </form>
-      <p>Acceso restringido • Contenido privado</p>
+      <p className="text-info">Acceso restringido • Contenido privado</p>
     </main>
   )
 }
