@@ -1,67 +1,68 @@
-export default function Sidebar() {
+import { useState, useEffect } from "react"
+import { useChat } from "../context/ChatContext"
 
-  const users = [
-    {
-      id: 1,
-      name: "Juan Perez",
-      status: "offline",
-      lastSeen: "7 min ago",
-    },
-    {
-      id: 1,
-      name: "Aiden Chavez",
-      status: "offline",
-      lastSeen: "7 min ago",
-    },
-    {
-      id: 1,
-      name: "Mike Tomas",
-      status: "online",
-      lastSeen: "",
-    },
-    {
-      id: 1,
-      name: "Christian Kelly",
-      status: "online",
-      lastSeen: "",
-    },
-    {
-      id: 1,
-      name: "Monica Ward",
-      status: "offline",
-      lastSeen: "1 hour ago",
-    }
-  ]
+export default function Sidebar() {
+  const { users, setSelectedUser } = useChat()
+  const [usersToRender, setUsersToRender] = useState(users)
+
+  // 🔄 Cada vez que cambien los usuarios globales, actualizamos la lista a renderizar
+  useEffect(() => {
+    setUsersToRender(users)
+  }, [users])
+
+  // 🔍 Filtro por búsqueda
+  const handleChange = (event) => {
+    const searchTerm = event.target.value.toLowerCase()
+    const result = users.filter((user) =>
+      user.name.toLowerCase().includes(searchTerm)
+    )
+    setUsersToRender(result)
+  }
+
   return (
     <div className="sidebar">
-      <input type="text" placeholder="Search..." className="search" />
+      <input
+        type="text"
+        placeholder="Search..."
+        className="search"
+        onChange={handleChange}
+      />
+
+      {usersToRender.length === 0 && (
+        <p className="search-result">No search found...</p>
+      )}
+
       <ul className="user-list">
-        {
-          users.map(user => <li className="user">
-            <img className="avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn: ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84o12MA8Xg&s" alt="" />
-            <div></div>
+        {usersToRender.map((user) => (
+          <li
+            key={user.id}
+            onClick={() => setSelectedUser(user.id)}
+            className="user"
+          >
+            <img
+              className="avatar"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
+              alt={user.name}
+            />
             <div className="user-info">
               <strong>
-                <span style={{ color: user.status === "online" ? "green" : "red", marginRight: "3px" }}>•</span>{user.name}
+                <span
+                  style={{
+                    color: user.status === "online" ? "green" : "red",
+                    marginRight: "3px",
+                  }}
+                >
+                  •
+                </span>
+                {user.name}
               </strong>
-              <small>{user.status === "offline" ? user.lastSeen : "online"}</small>
-
-            </div>
-          </li>)
-        }
-
-
-        {/*{[].map((u, i) => (
-          <li key={i} className="user">
-            <img src={u.avatar} alt={u.name} className="avatar" />
-            <div className={`status ${u.status}`}></div>
-            <div>
-              <strong>{u.name}</strong>
-              {u.lastSeen && <span className="last-seen"> - {u.lastSeen}</span>}
+              <small>
+                {user.status === "offline" ? user.lastSeen : "online"}
+              </small>
             </div>
           </li>
-        ))}*/}
+        ))}
       </ul>
-    </div >
+    </div>
   )
 }
