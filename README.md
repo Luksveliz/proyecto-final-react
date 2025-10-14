@@ -1,12 +1,86 @@
-# React + Vite
+# 📱 Clon de Whatsapp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*Curso de Programación Web Inicial – Front End Developer – Centro de e-Learning UTN FRBA*
 
-Currently, two official plugins are available:
+Una aplicación desarrollada como parte del curso de *Programador Web Inicial – Front End Developer*, que permite la simulación de recepción de mensajes a contactos predefinidos en tiempo real.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🧩 Características Principales
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend (React + Vite)
+- Envío de mensajes en tiempo real  
+- Interfaz accesible con *modo claro/oscuro*  
+- *Responsive design* optimizado para celulares  
+- *Pantalla completa*
+
+### Funcionalidades de Usuario
+- Registro e inicio de sesión con contraseña  
+- Historial de conversaciones por contacto  
+- Búsqueda y filtrado de contactos  
+- Sesiones persistentes con *localStorage*
+
+---
+
+## 🚀 Tecnologías Utilizadas
+
+- *React* – Biblioteca de interfaz de usuario  
+- *Vite* – Herramienta de desarrollo rápida  
+- *React Router DOM* – Navegación del lado del cliente
+
+---
+
+## 📦 Instalación y Configuración
+
+### Prerrequisitos
+- Tener instalado *npm*  
+- Usar un *navegador compatible* (Chrome recomendado)
+
+### Instalación Rápida
+
+bash
+# Clonar el repositorio
+git clone https://github.com/Luksveliz/proyecto-final-react
+
+# Instalar todas las dependencias
+npm install
+
+# Iniciar el entorno de desarrollo
+npm run dev
+
+
+---
+
+## 📱 Compatibilidad
+
+### Navegadores Soportados
+- Chrome/Chromium 25+ (Recomendado)  
+- Edge 79+  
+- Safari 14.1+
+
+### Dispositivos
+- *Desktop* – Experiencia completa  
+- *Mobile* – Funcionalidad básica
+
+---
+
+## 👨‍💻 Autor
+
+*Lucas Ramiro Véliz*  
+GitHub: [@Luksveliz](https://github.com/Luksveliz)  
+Email: luksveliz@gmail.com
+
+---
+
+## 🏫 Institución
+
+*Centro de e-Learning UTN FRBA*  
+*Universidad Tecnológica Nacional – Facultad Regional Buenos Aires*  
+Curso: Programador Web Inicial – Front End Developer
+
+---
+
+## 🙏 Agradecimientos
+
+- *UTN FRBA* por el espacio de aprendizaje  
+- *Profe Gabriel Alberini* por su didáctica, buena onda y paciencia al transmitir conocimiento
