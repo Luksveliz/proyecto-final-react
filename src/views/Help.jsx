@@ -41,7 +41,7 @@ const Help = () => {
 
         <ol>
           <li>
-            <h3>1 - 🎫 Autenticación (Contraseña)</h3>
+            <h3> - 🎫 Autenticación (Contraseña)</h3>
             <p>
               <strong>Propósito:</strong> Proteger el acceso y verificar la
               identidad del usuario.
@@ -53,7 +53,7 @@ const Help = () => {
           </li>
 
           <li>
-            <h3>2 - 📜 Lista de Contactos</h3>
+            <h3> - 📜 Lista de Contactos</h3>
             <p>
               <strong>Propósito:</strong> Navegación y selección de la
               conversación deseada.
@@ -66,7 +66,7 @@ const Help = () => {
           </li>
 
           <li>
-            <h3>3 - 💬 Chat Principal</h3>
+            <h3> - 💬 Chat Principal</h3>
             <p>
               <strong>Propósito:</strong> Envío y recepción de mensajes en tiempo
               real.
@@ -79,10 +79,9 @@ const Help = () => {
           </li>
 
           <li>
-            <h3>4 - ⚙️ Configuración</h3>
+            <h3> - ⚙️ Configuración</h3>
             <p>
-              <strong>Propósito:</strong> Personalización de la experiencia y la
-              interfaz.
+              <strong>Propósito:</strong> Personalizacion de la experiencia y la interfaz.
             </p>
             <p>
               <strong>Opciones Disponibles:</strong>
@@ -96,6 +95,36 @@ const Help = () => {
             </ul>
           </li>
         </ol>
+
+        <section style={styles.section}>
+          <ol>
+
+            <h2 style={styles.subtitle}>🎯 Como levantar el repositorio</h2>
+            <p>El codigo fuente se encuentra disponible publicamente
+              en el siguiente repositorio:
+              <p>
+                https://github.com/Luksveliz/proyecto-final-react
+              </p>
+            </p>
+            <p> <strong>Como levantar el repositorio:</strong>
+              <li> Clona elrepositorio</li>
+              <li> Instala las dependencias con <strong>npm install</strong></li>
+              <li> Inicia con <strong>npm run dev</strong></li></p>
+
+          </ol>
+        </section>
+
+        <section style={styles.section}>
+          <ol>
+
+            <h2 style={styles.subtitle}>🎯 Tecnologias Utilizadas</h2>
+
+            <li> React - Biblioteca de interfaz de usuario</li>
+            <li> Vite - Herramienta de desarrollo rápida</li>
+            <li> React Route Dom - Navegacion del lado del cliente</li>
+
+          </ol>
+        </section>
       </section>
 
       <footer style={styles.footer}>

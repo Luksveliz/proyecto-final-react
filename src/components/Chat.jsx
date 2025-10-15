@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useChat } from "../context/ChatContext"
 import { Link, useNavigate } from "react-router-dom"
 
+
 export default function Chat() {
   const [msg, setMsg] = useState("")
   const [showPopup, setShowPopup] = useState(false)
